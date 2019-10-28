@@ -4,6 +4,7 @@ use templating for dropdown quiz selection?
 */
 var express = require('express');
 var bodyParser = require('body-parser');
+'use strict';
 var fs = require('fs');
 var path = require('path');
 var path = require('ejs');
@@ -14,6 +15,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var content = fs.readFileSync("static/index.html", 'utf8');
 app.use("/static", express.static('static'));
 app.set('view engine', 'ejs');
+
+app.get('/home',function(req,res){
+  res.render('homepage');
+
+});
 
 app.get('/', function (req, res) {
   var readQuiz = fs.readFileSync("data/allQuizzes.json", 'utf8');
@@ -45,7 +51,7 @@ app.post('/quiz', function(req, res){
   jsonContent.push(sentQuiz);
 
   var jsonString = JSON.stringify(jsonContent);
-  fs.writeFile("data/allQuizzes.json", jsonString);
+  fs.writeFileS("data/allQuizzes.json", jsonString);
 
   res.send("updated");
 });
@@ -94,14 +100,6 @@ app.delete('/quiz/:id', function (req, res) {
   res.send("deleted");
 });
 
-app.get('/reset', function (req, res) {
-  var readIn = fs.readFileSync("data/defaultallquizzes.json", 'utf8');
-  // var readInAdded = fs.readFileSync("data/allQuizzes.json", 'utf8');
-  // fs.writeFile("data/allQuizzesRevert.json", readInAdded);
-  fs.writeFile("data/allQuizzes.json", readIn);
-  res.send("default quizzes restored");
-});
-
 app.get('/revert', function (req, res) {
   var readIn = fs.readFileSync("data/allQuizzesRevert.json", 'utf8');
   fs.writeFile("data/allQuizzes.json", readIn);
@@ -115,7 +113,7 @@ app.get('/users', function (req, res) {
 
 app.post('/users', function(req, res){
   var jsonString = JSON.stringify(req.body);
-  fs.writeFile("data/users.json", jsonString);
+  fs.writeFileSync("data/users.json", jsonString);
   res.send(req.body);
 });
 
