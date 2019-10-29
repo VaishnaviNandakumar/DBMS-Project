@@ -1,7 +1,7 @@
 {
-  "name": "chemistryquiz",
+  "name": "dbmsquiz",
   "version": "1.0.0",
-  "description": "nodeJS server for chemistry quiz",
+  "description": "nodeJS server for DBMS quiz",
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.14.1",
@@ -11,16 +11,17 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "addQuestions": "cd scripts && node addQuestions.js"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/gzgracez/dynamicQuiz.git"
   },
-  "author": "Grace Zhang",
+  "author": "Vaishnavi Nandakumar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gzgracez/dynamicQuiz/issues"
+    "url": "https://github.com/VaishnaviNandakumar/DBMS-Projectissues"
   },
-  "homepage": "https://github.com/gzgracez/dynamicQuiz#readme"
+  "homepage": "https://github.com/VaishnaviNandakumar/DBMS-Project#readme"
 }
