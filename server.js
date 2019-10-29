@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 
 const Question = require('./models/questions');
+const User = require('./models/user');
 
 const app = express();
 
@@ -22,20 +23,17 @@ app.get('/', async function(_req, res){
 });
 
 app.get('/home', async function (req, res) {
-  var readQuiz = await Question.find({});
-  console.log(readQuiz);
-
-  var titles = [];
+  const readQuiz = await Question.find({});
+  const titles = [];
   for (var i = 0; i<readQuiz.length; i++) {
     titles[i] = readQuiz[i]["title"];
   }
-  console.log(titles);
-  res.render('index',{titles: titles});
+  res.render('index', {titles: titles});
 });
 
 app.get('/,/quiz', async function (req, res) {
-  var readQuiz = await Question.find({});
-  var titles = [];
+  const readQuiz = await Question.find({});
+  const titles = [];
   for (var i = 0; i<readQuiz.length; i++) {
     titles[i] = readQuiz[i]["title"];
   }
@@ -43,22 +41,21 @@ app.get('/,/quiz', async function (req, res) {
 });
 
 app.post('/quiz', async function(req, res){
-  var sentQuiz = req.body;
-  var readQuiz = await Question.find({});
+  const sentQuiz = req.body;
+  const readQuiz = await Question.find({});
   if (readQuiz.length > 0) {
     sentQuiz["id"] = readQuiz[readQuiz.length-1]["id"] + 1;
   }
   readQuiz.push(sentQuiz);
-
-  var jsonString = JSON.stringify(readQuiz);
-  fs.writeFileS("data/allQuizzes.json", jsonString);
+  await Question.insertMany(readQuiz);
 
   res.send("updated");
 });
 
 app.get('/quiz/:id', async function (req, res) {
   var readQuiz = await Question.find({});
-  var targetQuiz;;
+  var targetQuiz;
+
   for (var i = 0; i < readQuiz.length; i++) {
     if (readQuiz[i]["id"] === parseInt(req.params.id)) {
       targetQuiz = readQuiz[i];
@@ -70,17 +67,16 @@ app.get('/quiz/:id', async function (req, res) {
 
 app.put('/quiz/:id', async function (req, res) {
   var sentQuiz = req.body;
-  var readQuiz = await Question.find({});
+  const readQuiz = await Question.find({});
   for (var i = 0; i < readQuiz.length; i++) {
+    const _id = readQuiz[i]["_id"];
     if (readQuiz[i]["id"] === parseInt(req.params.id)) {
       readQuiz[i] = sentQuiz;
+      readQuiz[i]["_id"] = _id;
       break;
     }
   }
-
-  var jsonString = JSON.stringify(readQuiz);
-  fs.writeFile("data/allQuizzes.json", jsonString);
-
+  await Question.insertMany(readQuiz);
   res.send("updated");
 });
 
@@ -92,25 +88,26 @@ app.delete('/quiz/:id', async function (req, res) {
       break;
     }
   }
-  var jsonString = JSON.stringify(readQuiz);
-  fs.writeFile("data/allQuizzes.json", jsonString);
+  await Question.insertMany(readQuiz);
+
   res.send("deleted");
 });
 
 app.get('/revert', async function (req, res) {
   var readIn = fs.readFileSync("data/allQuizzesRevert.json", 'utf8');
   fs.writeFile("data/allQuizzes.json", readIn);
-  res.send("reverted");
+
+  res.send("reverted, add Questions again through npm script");
 });
 
 app.get('/users', async function (req, res) {
-  var readUsers = fs.readFileSync("data/users.json", 'utf8');
-  res.send(readUsers);
+  const readUsers = await User.find({});
+  res.json(readUsers);
 });
 
 app.post('/users', async function(req, res){
-  var jsonString = JSON.stringify(req.body);
-  fs.writeFileSync("data/users.json", jsonString);
+  var readQuiz = JSON.stringify(req.body);
+  await User.insertMany(readQuiz);
   res.send(req.body);
 });
 
