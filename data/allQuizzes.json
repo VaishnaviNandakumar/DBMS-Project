@@ -1,5 +1,4 @@
-[
-    {
+[{
         "id": 1,
         "title": "Database Management System",
         "description": "DBMS Quiz",
@@ -8,15 +7,14 @@
             "Quiz"
         ],
         "difficulty": "1",
-        "questions": [
-            {
+        "questions": [{
                 "text": " A relational database consists of a collection of",
                 "answers": [
-                    
-                   "Fields",
-                   "Tables",
-                   "Records",
-                   "Keys"
+
+                    "Fields",
+                    "Tables",
+                    "Records",
+                    "Keys"
                 ],
                 "correct_answer": 1,
                 "global_correct": 1,
@@ -29,8 +27,8 @@
                 "text": "A ________ in a table represents a relationship among a set of values.",
                 "answers": [
                     "Column",
-                   "Key",
-                   "Entry",
+                    "Key",
+                    "Entry",
                     "Row"
                 ],
                 "correct_answer": 3,
@@ -59,9 +57,9 @@
                 "text": " A domain is atomic if elements of the domain are considered to be ____________ units",
                 "answers": [
                     " Different",
-                     "Constant",
-                     "Indivisbile",
-                     "Divisible"
+                    "Constant",
+                    "Indivisbile",
+                    "Divisible"
                 ],
                 "correct_answer": 2,
                 "global_correct": 1,
@@ -85,7 +83,7 @@
                     "DBMS"
                 ]
             }
-            
+
         ]
     },
 
@@ -93,8 +91,7 @@
         "id": 2,
         "title": "Treasure Hunt Hard",
         "description": "Do not try this quiz if you have a fear of failing",
-        "questions": [
-            {
+        "questions": [{
                 "text": "The Recited Container Of Looks",
                 "answers": [
                     "The Pool",

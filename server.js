@@ -1,27 +1,26 @@
-/*//update title of tab
-Take Quiz, modify quiz, edit quiz, delete quiz
-use templating for dropdown quiz selection?
-*/
-var express = require('express');
-var bodyParser = require('body-parser');
 'use strict';
+
+var express = require('express');
+
+var bodyParser = require('body-parser');
+
 var fs = require('fs');
-var path = require('path');
-var path = require('ejs');
 
 var app = express();
+
 app.use(bodyParser.json());
+
 app.use(bodyParser.urlencoded({ extended: true }));
-var content = fs.readFileSync("static/index.html", 'utf8');
+
 app.use("/static", express.static('static'));
+
 app.set('view engine', 'ejs');
 
-app.get('/home',function(req,res){
+app.get('/',function(req,res){
   res.render('homepage');
-
 });
 
-app.get('/', function (req, res) {
+app.get('/home', function (req, res) {
   var readQuiz = fs.readFileSync("data/allQuizzes.json", 'utf8');
   var jsonContent = JSON.parse(readQuiz);
   var titles = [];
@@ -146,5 +145,5 @@ app.get('/titlesandids', function (req, res) {
 var server = app.listen(process.env.PORT || 4000, function() {
   var host = server.address().address;
   var port = server.address().port;
-  console.log('Example app listening at http://%s:%s', host, port);
+  console.log(`app listening on port ${port}`, host, port);
 });
