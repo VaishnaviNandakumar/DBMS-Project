@@ -1,0 +1,30 @@
+{
+  "name": "dbmsquiz",
+  "version": "1.0.0",
+  "description": "nodeJS server for DBMS quiz",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "fs": "0.0.2",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "addQuestions": "cd scripts && node addQuestions.js",
+    "addUsers": "cd scripts && node addUsers.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gzgracez/dynamicQuiz.git"
+  },
+  "author": "Vaishnavi Nandakumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VaishnaviNandakumar/DBMS-Projectissues"
+  },
+  "homepage": "https://github.com/VaishnaviNandakumar/DBMS-Project#readme"
+}

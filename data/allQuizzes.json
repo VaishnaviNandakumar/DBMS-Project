@@ -1,0 +1,430 @@
+[   {
+    "id": 1,
+    "title": "Database Management System",
+    "description": "Database Management System Quiz",
+    "meta_tags": [
+        "DBMS",
+        "Quiz"
+    ],
+    "difficulty": "1",
+    "questions": [{
+            "text": " A relational database consists of a collection of",
+            "answers": [
+
+                "Fields",
+                "Tables",
+                "Records",
+                "Keys"
+            ],
+            "correct_answer": 1,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "Tables"
+            ]
+        },
+        {
+            "text": "A ________ in a table represents a relationship among a set of values.",
+            "answers": [
+                "Column",
+                "Key",
+                "Entry",
+                "Row"
+            ],
+            "correct_answer": 3,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        },
+        {
+            "text": "The term _______ is used to refer to a row.",
+            "answers": [
+                "Attribute",
+                " Field",
+                "Tuple",
+                "Instance"
+            ],
+            "correct_answer": 2,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        },
+        {
+            "text": " A domain is atomic if elements of the domain are considered to be ____________ units",
+            "answers": [
+                " Different",
+                "Constant",
+                "Indivisbile",
+                "Divisible"
+            ],
+            "correct_answer": 2,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        },
+        {
+            "text": " Using which language can a user request information from a database?",
+            "answers": [
+                "Query",
+               " Relational",
+                "Structural",
+                "Compiler"
+            ],
+            "correct_answer": 0,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        },
+        {
+            "text": " Student(ID, name, dept name, tot_cred) In this query which attributes form the primary key?",
+            "answers": [
+                "Name",
+                "Dept",
+                 "Tot_cred",
+                "ID"
+            ],
+            "correct_answer": 3,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        },
+        {
+            "text": " Which one of the following is a procedural language?",
+            "answers": [
+                "Domain relational calculus",
+               "Tuple relational calculus",
+                "Relational algebra",
+                "Query language"
+            ],
+            "correct_answer": 2,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        },
+        {
+            "text": "The_____ operation allows the combining of two relations by merging pairs of tuples, one from each relation, into a single tuple.",
+            "answers": [
+                "Select",
+               "Join",
+               "Union",
+                "Intersection"
+            ],
+            "correct_answer": 1,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        },
+        {
+            "text": "The result which operation contains all pairs of tuples from the two relations, regardless of whether their attribute values match.",
+            "answers": [
+                "Join",
+                "Cartesian product",
+                "Intersection",
+               " Set difference"
+            ],
+            "correct_answer": 1,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        },
+        {
+            "text": " The tuples of the relations can be of ________ order.",
+            "answers": [
+                "Same",
+                "Sorted",
+                "Constant",
+                "Any"
+            ],
+            "correct_answer": 3,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        }
+
+    ]
+},
+{
+    "id": 2,
+    "title": "SQL Basics and Data Definition",
+    "description": "SQL Basics and SQL Data Definition Quiz",
+    "meta_tags": [
+        "DBMS",
+        "Quiz"
+    ],
+    "difficulty": "2",
+    "questions": [{
+            "text": " Which one of the following is used to define the structure of the relation, deleting relations and relating schemas?",
+
+            "answers":[
+               " DML(Data Manipulation Langauge)",
+                "DDL(Data Definition Langauge)",
+                "Query",
+                "Relational Schema"
+            ],
+
+            "correct_answer": 1,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "Tables"
+            ]
+        },
+        {
+            "text": "Which one of the following provides the ability to query information from the database and to insert tuples into, delete tuples from, and modify tuples in the database?",
+            "answers": [
+                " DML(Data Manipulation Langauge)",
+                "DDL(Data Definition Langauge)",
+                "Query",
+                "Relational Schema"
+            ],
+            "correct_answer": 0,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        },
+        {
+            "text": "The basic data type char(n) is a _____ length character string and varchar(n) is _____ length character.",
+            "answers": [
+                "Fixed, equal",
+            "Equal, variable",
+            "Fixed, variable",
+             "Variable, equal"
+            ],
+            "correct_answer": 2,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        },
+        {
+            "text": " An attribute A of datatype varchar(20) has the value “Avi”. The attribute B of datatype char(20) has value ”Reed”. Here attribute A has ____ spaces and attribute B has ____ spaces.",
+            "answers": [
+                "3, 20",
+               " 20, 4",
+                "20, 20",
+               " 3, 4"
+            ],
+            "correct_answer": 0,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        },
+        {
+            "text": "To remove a relation from an SQL database, we use the ______ command.",
+            "answers": [
+                "Delete",
+                 "Purge",
+                 "Remove",
+                "Drop table"
+            ],
+            "correct_answer": 3,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        }
+
+    ]
+},
+{
+    "id": 2,
+    "title": "Relational Algebra",
+    "description": "Relational Algebra Quiz",
+    "meta_tags": [
+        "DBMS",
+        "Quiz"
+    ],
+    "difficulty": "3",
+    "questions": [{
+            "text": " Relational Algebra is a __________ query language that takes two relations as input and produces another relation as an output of the query.",
+            "answers": [
+
+               " Relational",
+                "Structural",
+                "Procedural",
+                "Fundamental"
+            ],
+            "correct_answer": 2,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "Tables"
+            ]
+        },
+        {
+            "text": "Which of the following is a fundamental operation in relational algebra?",
+            "answers": [
+                "Set intersection",
+                "Natural join",
+                "Assignment",
+                "None of the mentioned"
+            ],
+            "correct_answer": 3,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        },
+        {
+            "text": "Which of the following is used to denote the selection operation in relational algebra?",
+            "answers": [
+                 "Pi (Greek)",
+                 "Sigma (Greek)",
+                 "Lambda (Greek)",
+                 "Omega (Greek)"
+            ],
+            "correct_answer": 1,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        },
+        {
+            "text": "The ___________ operation, denoted by −, allows us to find tuples that are in one relation but are not in another.",
+            "answers": [
+                " Union",
+               " Set-difference",
+                 "Difference",
+                "Intersection"
+            ],
+            "correct_answer": 1,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        },
+        {
+            "text": "Which is a unary operation:",
+            "answers": [
+                "Selection operation",
+                " Primitive operation",
+                "Projection operation",
+                "Generalized selection"
+            ],
+            "correct_answer": 3,
+            "global_correct": 1,
+            "global_total": 15,
+            "meta_tags": [
+                "DBMS"
+            ]
+        }
+
+    ]
+},
+
+    {
+        "id": 4,
+        "title": "Operating System",
+        "description": "Operating System Quiz",
+        "questions": [{
+                "text": "The Recited Container Of Looks",
+                "answers": [
+                   " uniprogramming systems",
+                    "uniprocessing systems",
+                   " unitasking systems",
+                   " none of the mentioned"
+                                    ],
+                "correct_answer": 1,
+                "global_correct": 0,
+                "global_total": 1,
+                "meta_tags": [
+                    "OS"
+                ]
+            },
+            {
+                "text": "In operating system, each process has its own __________",
+                "answers": [
+                    "address space and global variables",
+                    "open files",
+                    "pending alarms, signals and signal handlers",
+                    "all of the mentioned"
+                                    ],
+                "correct_answer": 3,
+                "global_correct": 0,
+                "global_total": 1,
+                "meta_tags": [
+                    "OS"
+                ]
+            },
+            {
+                "text": "What is the ready state of a process?_",
+                "answers": [
+                   "when process is scheduled to run after some execution",
+                   "when process is unable to run until some task has been completed",
+                    "when process is using the CPU",
+                    "none of the mentioned"
+                                    ],
+                "correct_answer": 0,
+                "global_correct": 0,
+                "global_total": 1,
+                "meta_tags": [
+                    "OS"
+                ]
+            },
+            {
+                "text": "In Unix, Which system call creates the new process?",
+                "answers": [
+                    "fork",
+                    "create",
+                    "new",
+                    "none of the mentioned"
+                                    ],
+                "correct_answer": 1,
+                "global_correct": 0,
+                "global_total": 1,
+                "meta_tags": [
+                    "OS"
+                ]
+            },
+            {
+                "text": "A process can be terminated due to __________",
+                "answers": [
+                     "normal exit",
+                    "fatal error",
+                    "killed by another process",
+                    "all of the mentioned"
+                                    ],
+                "correct_answer": 3,
+                "global_correct": 0,
+                "global_total": 1,
+                "meta_tags": [
+                    "OS"
+                ]
+            }
+            
+        ],
+        "difficulty": 2,
+        "global_correct": 5,
+        "global_total": 11,
+        "meta_tags": [
+            "OS"
+        ]
+    }
+]

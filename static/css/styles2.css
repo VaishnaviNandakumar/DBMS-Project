@@ -1,0 +1,57 @@
+body{
+    background: linear-gradient(#e5464b, #303956) fixed;
+    
+    margin-top: 40px;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+.card{
+    background-color: white;
+    margin-top: 5%;
+    margin-left: 20%;
+    border: 5px solid grey;
+    width: 650px;
+    padding: 30px;
+    height: 60%;
+    color: #e5464b;
+    box-shadow: inset 0 4px 8px rgba(0,0,0,0.16), 0 4px 10px rgba(0,0,0,0.45);
+}
+
+#card2{
+    width:800px;
+    margin-left: 15%;
+}
+
+.btn-back{
+    margin-left: 10% !important;
+}
+
+.btn-next{
+    margin-left: 60% !important;
+    background-color: grey;
+}
+.card-title{
+    text-align: center;
+}
+
+.form-control{
+    height:40px;
+}
+.btn-hm{
+    background-color: #303956;
+}
+.btn{
+    
+    border-radius: 20px;
+    height: 40px;
+    width: 100px;
+}
+
+.btn-start{
+    background-color: #303956;
+    margin-left: 40%;
+}
+
+a{
+    color: white;
+}

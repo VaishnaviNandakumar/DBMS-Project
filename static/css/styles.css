@@ -1,0 +1,16 @@
+body{
+    background-color: #211b4a;
+    font-family: 'Raleway', sans-serif;
+}
+
+.content{
+    margin-top: 40%;
+    color: white;
+}
+
+.pic{
+    margin-top: 17%;
+    object-fit: cover;
+    width: 600px;
+}
+
