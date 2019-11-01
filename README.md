@@ -1,6 +1,7 @@
 # Quizzy - A Quiz App
 ### A simple quiz application created with Node.js and MongoDB
-####This is the submission for my DBMS Project done under the guidance of Prof. Sanjiban Shekhar Roy
+
+#### This is the submission for my DBMS Project done under the guidance of Prof. Sanjiban Shekhar Roy
 
 ## Table of contents
 * [Quiz](#quiz)
